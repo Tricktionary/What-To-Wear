@@ -5,15 +5,15 @@ function getWeather() {
         return alert('Please enter a city');
     }
 
-    var cityDiv = $('#cityweather');
-    cityDiv.innerHTML = ''
-
     $.get(`/weather?city=${cityName}`,function(data){
-       console.log(data);
+        
+       var obj = JSON.parse(data);
 
-       //Build Front END logic to determine clothing
+       console.log(obj);
+    
+        $("#weatherDesc").text(obj.weather[0].description);
+
     });
-
 
     //Attach Enter-key Handler
     const ENTER=13
