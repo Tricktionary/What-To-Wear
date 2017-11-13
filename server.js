@@ -21,17 +21,22 @@ app.get('/', function(request, response){
   response.sendFile(__dirname + '/views/index.html')
 });
 
-
+//Get Weather
 app.get('/weather', function(request, response){
-  let city = request.query.city
+  var city = request.query.city
   if(!city) {
-    return response.json({message: 'Please enter a city name'})
+    response.send({
+      message: "Please enter a city",
+      status : 500,
+    });
   }
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}`
-  requestModule.get(url, (err, res, data) => {
-    return response.contentType('application/json').json(JSON.parse(data))
+  requestModule.get(url, function(err, res, data){
+    //console.log(data);
+    response.send(data);
   })
 });
+
 
 //Listening on local host 3000
 app.listen(3000,function(){
