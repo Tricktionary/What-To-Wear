@@ -7,11 +7,12 @@ function getWeather() {
 
     $.get(`/weather?city=${cityName}`,function(data){
         
-       var obj = JSON.parse(data);
+        var obj = JSON.parse(data);
 
-       console.log(obj);
-    
-        $("#weatherDesc").text(obj.weather[0].description);
+        console.log(obj);
+        var temp = (obj.main.temp-273).toFixed(2);
+        $("#weatherDesc").text("Description: "+obj.weather[0].description);
+        $("#temp").text("Temperature in Celcius: " + temp);
 
     });
 
