@@ -27,24 +27,24 @@
 </head>
 
 <body class = "bg">
-    <div class="row">
-        <h3 class="center white-text">What to wear?</h3>
-        <!--<i class="wi wi-night-sleet"></i>-->
-    </div>
 
     <!--SUBMIT AND CURRENT WEATHER-->
-    <div class="row">   
-        <div class="col s12 m6">
-            <div class="card blue-grey">
+    <div class="row"> 
+        <div class=" col s12 m12 centers">
+            <h1 class="center">What to Wear?</h1>
+        </div>  
+        <div class="col s12 m6" >
+             
+            <div class="card red lighten-2">
                 <div class="card-content white-text">
                     <h5>Enter City Name:<h5>
                     <input type="text" name="city" id="city" />
-                    <div class="btn waves-effect waves-light" id="submit" onclick="getWeather()" style="margin-bottom: 50px;">Submit</div>
+                    <div class="btn waves-effect waves-light red darken-4" id="submit" onclick="getWeather()" style="margin-bottom: 50px;">Submit</div>
                 </div>
             </div>
         </div>
         <div class="col s12 m6">
-            <div class="card blue-grey">
+            <div class="card red lighten-2">
                 <div class="card-content white-text">
                     <h5>Current Weather Conditions:</h5>
                     <p id = "weatherDesc"></p>
@@ -60,7 +60,7 @@
     <!--CLOTHING-->
     <div class="row">
         <div class="col m3 s3">
-            <div class="card blue-grey">
+            <div class="card red lighten-1">
                 <div class="card-content white-text">
                     <h6>Head:</h6>
                     <div id = "head"></div>
@@ -68,7 +68,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div class="card blue-grey">
+            <div class="card red lighten-1">
                 <div class="card-content white-text">
                     <h6>Upper Body:</h6>
                     <div id = "uBody"></div>
@@ -76,7 +76,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div class="card blue-grey">
+            <div class="card red lighten-1">
                 <div class="card-content white-text">
                     <h6>Lower Body:</h6>
                     <div id = "lBody"></div>
@@ -84,7 +84,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div class="card blue-grey">
+            <div class="card red lighten-1">
                 <div class="card-content white-text">
                     <h6>Feet:</h6>
                     <div id = "feet"></div>
