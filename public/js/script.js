@@ -1,6 +1,12 @@
 //Weather Icon Json
 var weatherIcons;
 
+var headCloth = {};
+var upperBodyCloths = {};
+var lowerBodyCloths = {};
+var footCloth       = {};
+
+
 $(document).ready(function(){
 
     //load in JSON object
@@ -58,6 +64,8 @@ function setClothing(temp,condition){
     var uBody = $("#uBody");
     var lBody = $("#lBody");
     var feet  = $("#feet");
+
+    //List all possible weather condition and show accordingly
 }
 
  
