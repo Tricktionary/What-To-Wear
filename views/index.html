@@ -5,7 +5,9 @@
     <title>What to Wear?</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" 
+      type="image/png" 
+      href="http://www.newdesignfile.com/postpic/2011/08/forecast-icon-weather-symbols_191578.png">
     <!--JQUERY-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
@@ -21,6 +23,9 @@
     <!--ROBOTO Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+
     <!--ICONS-->
     <link rel="stylesheet" href="/styles/weather-icons.css">
 
@@ -35,7 +40,7 @@
         </div>  
         <div class="col s12 m6" >
              
-            <div class="card red lighten-2">
+            <div class="card red lighten-2 z-depth-5">
                 <div class="card-content white-text">
                     <h5>Enter City Name:<h5>
                     <input type="text" name="city" id="city" />
@@ -44,14 +49,14 @@
             </div>
         </div>
         <div class="col s12 m6">
-            <div class="card red lighten-2">
+            <div class="card red lighten-2 z-depth-5">
                 <div class="card-content white-text">
                     <h5>Current Weather Conditions:</h5>
                     <p id = "weatherDesc"></p>
                     <p id = "currTemp"></p>
                     <p id = "highTemp"></p>
                     <p id = "lowTemp"></p>
-                    <i id = "weatherIcon" style="font-size: 50px;margin-top: 20px" ></i>
+                    <i id = "weatherIcon" style="font-size: 55px;margin-top: 20px" ></i>
                 </div>
             </div>
         </div>
@@ -60,7 +65,7 @@
     <!--CLOTHING-->
     <div class="row">
         <div class="col m3 s3">
-            <div class="card red lighten-1">
+            <div class="card red lighten-1 z-depth-5">
                 <div class="card-content white-text">
                     <h6>Head:</h6>
                     <div id = "head"></div>
@@ -68,7 +73,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div class="card red lighten-1">
+            <div class="card red lighten-1 z-depth-5">
                 <div class="card-content white-text">
                     <h6>Upper Body:</h6>
                     <div id = "uBody"></div>
@@ -76,7 +81,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div class="card red lighten-1">
+            <div class="card red lighten-1 z-depth-5">
                 <div class="card-content white-text">
                     <h6>Lower Body:</h6>
                     <div id = "lBody"></div>
@@ -84,7 +89,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div class="card red lighten-1">
+            <div class="card red lighten-1 z-depth-5">
                 <div class="card-content white-text">
                     <h6>Feet:</h6>
                     <div id = "feet"></div>
