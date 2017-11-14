@@ -32,27 +32,32 @@
         <!--<i class="wi wi-night-sleet"></i>-->
     </div>
 
+    <!--SUBMIT AND CURRENT WEATHER-->
     <div class="row">   
         <div class="col s12 m6">
             <div class="card blue-grey">
                 <div class="card-content white-text">
-                    Enter City Name: <input type="text" name="city" id="city" />
-                    <button class="btn" id="submit" onclick="getWeather()" style="margin-bottom: 50px;">Submit</button>
+                    <h5>Enter City Name:<h5>
+                    <input type="text" name="city" id="city" />
+                    <div class="btn waves-effect waves-light" id="submit" onclick="getWeather()" style="margin-bottom: 50px;">Submit</div>
                 </div>
             </div>
         </div>
         <div class="col s12 m6">
             <div class="card blue-grey">
                 <div class="card-content white-text">
-                    <h6>Current Weather Conditions:</h6>
+                    <h5>Current Weather Conditions:</h5>
                     <p id = "weatherDesc"></p>
-                    <p id = "temp"></p>
-                    <div id="cityweather"></div>
+                    <p id = "currTemp"></p>
+                    <p id = "highTemp"></p>
+                    <p id = "lowTemp"></p>
+                    <i id = "weatherIcon" style="font-size: 50px" ></i>
                 </div>
             </div>
         </div>
     </div>
 
+    <!--CLOTHING-->
     <div class="row">
         <div class="col m3 s3">
             <div class="card blue-grey">
@@ -87,7 +92,6 @@
             </div> 
         </div>
     </div>
-
 
     <script src="js/script.js"></script>
 </body>
