@@ -5,7 +5,20 @@ var headCloth = {};
 var upperBodyCloths = {};
 var lowerBodyCloths = {};
 var footCloth       = {};
-
+var themeCycle = {
+    morning : {
+        bg : "BG_MORN"
+    },
+    day:{
+        bg : "BG_SUN.jpg"
+    },
+    night:{
+        bg : "BG_NIGHT.png"
+    },
+    sunset:{
+        bg : "BG_SUNSET.jpg"
+    }
+};
 
 $(document).ready(function(){
 
@@ -44,7 +57,7 @@ function getWeather() {
             icon = 'day-' + icon;
         }
         icon = prefix + icon;
-        console.log(icon);
+        //console.log(icon);
 
         $("#weatherDesc").text("Description: "+obj.weather[0].description);
         $("#currTemp").text("Current temperature: " + temp +"°C");
@@ -52,11 +65,36 @@ function getWeather() {
         $("#lowTemp").text("Low of: "+ Math.round(obj.main.temp_min - 273) +"°C");
         $("#weatherIcon")[0].classList = "";
         $("#weatherIcon")[0].classList = icon;
+        setTheme(obj.coord.lat,obj.coord.lon);
         setClothing(temp,mainCond);
     });
 
 
 }
+//Set the theme based on the day
+function setTheme(lat,lon){
+
+    $.get(`/time?lat=${lat}&lon=${lon}`,function(data){
+        var obj = JSON.parse(data);
+       
+        var time = obj.time.substring(11);
+        //console.log(time);
+        var timeInMin = getTime(time);
+
+        //Start theming based of ranges decided 
+
+    });
+}
+
+//Get time in minute
+function getTime(timeString){
+    var hour = timeString.substring(0,2);
+    var minute = timeString.substring(3,6);
+    console.log(hour);
+    console.log(minute);
+    return(hour*60 + parseInt(minute));
+}
+
 
 //Set the clothing
 function setClothing(temp,condition){

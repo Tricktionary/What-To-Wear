@@ -37,6 +37,17 @@ app.get('/weather', function(request, response){
   })
 });
 
+//Get TimeZone
+app.get('/time',function(request,response){
+  var lat = request.query.lat;
+  var lon = request.query.lon;
+
+  const url = 'http://api.geonames.org/timezoneJSON?lat='+lat+'&lng='+lon+'&username=tricktionary'
+  requestModule.get(url,function(err,res,data){
+    //console.log(data);
+    response.send(data);
+  });
+});
 
 //Listening on local host 3000
 app.listen(3000,function(){
