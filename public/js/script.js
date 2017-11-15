@@ -1,24 +1,18 @@
 //Weather Icon Json
 var weatherIcons;
 
+/*
+    CLOTHING
+*/
 var headCloth = {};
 var upperBodyCloths = {};
 var lowerBodyCloths = {};
 var footCloth       = {};
-var themeCycle = {
-    morning : {
-        bg : "BG_MORN"
-    },
-    day:{
-        bg : "BG_SUN.jpg"
-    },
-    night:{
-        bg : "BG_NIGHT.png"
-    },
-    sunset:{
-        bg : "BG_SUNSET.jpg"
-    }
-};
+
+/*
+    THEME
+    1440 MINUTES IN A DAY
+*/
 
 $(document).ready(function(){
 
@@ -31,7 +25,6 @@ $(document).ready(function(){
 
 //Get the current weather conditions
 function getWeather() {
-
     var cityName = $('#city').val();
     if(cityName === '') {
         return alert('Please enter a city');
@@ -68,33 +61,60 @@ function getWeather() {
         setTheme(obj.coord.lat,obj.coord.lon);
         setClothing(temp,mainCond);
     });
-
-
 }
+
 //Set the theme based on the day
 function setTheme(lat,lon){
-
     $.get(`/time?lat=${lat}&lon=${lon}`,function(data){
         var obj = JSON.parse(data);
-       
         var time = obj.time.substring(11);
-        //console.log(time);
         var timeInMin = getTime(time);
-
+        var bg;
         //Start theming based of ranges decided 
 
+        //Morning
+        if(timeInMin > 420 && timeInMin < 660 ){
+            bg = "BG_MORN.jpg";
+            $("#submitCard");
+            $("#weatherCard");
+            $("#headCard");
+            $("#ubodyCard");
+            $("#lbodyCard");
+            $("#feetCard");
+        }
+        //Day
+        if(timeInMin > 660 && timeInMin < 960){
+            bg = "BG_SUN.jpg";
+            $("#submitCard");
+            $("#weatherCard");
+            $("#headCard");
+            $("#ubodyCard");
+            $("#lbodyCard");
+            $("#feetCard");
+        }
+        //Sunset
+        if(timeInMin > 960 && timeInMin < 1080){
+            bg = "BG_SUNSET.jpg";
+            $("#submitCard");
+            $("#weatherCard");
+            $("#headCard");
+            $("#ubodyCard");
+            $("#lbodyCard");
+            $("#feetCard");
+        }
+        //Night
+        if(timeInMin <420 || timeInMin >1080){
+            bg = "BG_NIGHT.png";
+            $("#submitCard");
+            $("#weatherCard");
+            $("#headCard");
+            $("#ubodyCard");
+            $("#lbodyCard");
+            $("#feetCard");
+        }
+    
     });
 }
-
-//Get time in minute
-function getTime(timeString){
-    var hour = timeString.substring(0,2);
-    var minute = timeString.substring(3,6);
-    console.log(hour);
-    console.log(minute);
-    return(hour*60 + parseInt(minute));
-}
-
 
 //Set the clothing
 function setClothing(temp,condition){
@@ -103,50 +123,19 @@ function setClothing(temp,condition){
     var lBody = $("#lBody");
     var feet  = $("#feet");
 
-    /* List all possible weather condition and show accordingly
+    /* List all possible weather condition and show accordingly */
 
-    Temperature Ranges :
-    
-    -30 to -25 = 2 socks, thermals,any pants,shirt,sweater, jacket,scarf ,glove ,hat, boots
-    
-    -25 to -20 = 1 sock, thermals, same, boots
-    
-    -20 to -10 = regular shit ,sweater, boots
 
-    -10 to  0. = jacket, hat
-    
-    -0  to  10 = sweater or windbreaker
-
-    -10 to  20 = t-shirt, pants
-
-    -20 to. 25 = pants, tshirt, light outerwear
-
-    30++       = Shorts, tshirt , tank, burks,
-
-    
-    Possible Conditions:
-
-    Rain
-        umbrella and boots
-    Hail 
-        Dont go outside
-
-    ThunderStorm
-        just wet or rain jacket and rainboots
-
-    Blizzard
-        same thing as 30
-
-    Snow
-        -Boots
-
-    Mist
-        extra layer cause your gonna get wet 
-
-    Sunny
-        Sunscreen, sunglasses, hat with a cap
-
-    */
 }
+
+//Get time in minute
+function getTime(timeString){
+    var hour = timeString.substring(0,2);
+    var minute = timeString.substring(3,6);
+    //console.log(hour);
+    //console.log(minute);
+    return(hour*60 + parseInt(minute));
+}
+
 
  

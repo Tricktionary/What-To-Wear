@@ -32,7 +32,6 @@ app.get('/weather', function(request, response){
   }
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}`
   requestModule.get(url, function(err, res, data){
-    //console.log(data);
     response.send(data);
   })
 });
@@ -44,7 +43,6 @@ app.get('/time',function(request,response){
 
   const url = 'http://api.geonames.org/timezoneJSON?lat='+lat+'&lng='+lon+'&username=tricktionary'
   requestModule.get(url,function(err,res,data){
-    //console.log(data);
     response.send(data);
   });
 });

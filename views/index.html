@@ -31,7 +31,7 @@
 
 </head>
 
-<body class = "bg">
+<body id="body" class = "bg">
 
     <!--SUBMIT AND CURRENT WEATHER-->
     <div class="row"> 
@@ -40,7 +40,7 @@
         </div>  
         <div class="col s12 m6" >
              
-            <div class="card red lighten-2 z-depth-5">
+            <div id="submitCard" class="card red lighten-2 z-depth-5">
                 <div class="card-content white-text">
                     <h5>Enter City Name:<h5>
                     <input type="text" name="city" id="city" />
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="col s12 m6">
-            <div class="card red lighten-2 z-depth-5">
+            <div id="weatherCard" class="card red lighten-2 z-depth-5">
                 <div class="card-content white-text">
                     <h5>Current Weather Conditions:</h5>
                     <p id = "weatherDesc"></p>
@@ -65,7 +65,7 @@
     <!--CLOTHING-->
     <div class="row">
         <div class="col m3 s3">
-            <div class="card red lighten-1 z-depth-5">
+            <div id="headCard" class="card red lighten-1 z-depth-5">
                 <div class="card-content white-text">
                     <h6>Head:</h6>
                     <div id = "head"></div>
@@ -73,7 +73,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div class="card red lighten-1 z-depth-5">
+            <div id="ubodyCard" class="card red lighten-1 z-depth-5">
                 <div class="card-content white-text">
                     <h6>Upper Body:</h6>
                     <div id = "uBody"></div>
@@ -81,7 +81,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div class="card red lighten-1 z-depth-5">
+            <div id="lbodyCard" class="card red lighten-1 z-depth-5">
                 <div class="card-content white-text">
                     <h6>Lower Body:</h6>
                     <div id = "lBody"></div>
@@ -89,7 +89,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div class="card red lighten-1 z-depth-5">
+            <div id="feetCard" class="card red lighten-1 z-depth-5">
                 <div class="card-content white-text">
                     <h6>Feet:</h6>
                     <div id = "feet"></div>

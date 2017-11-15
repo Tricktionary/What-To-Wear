@@ -1,0 +1,40 @@
+    Temperature Ranges :
+    
+    -30 to -25 = 2 socks, thermals,any pants,shirt,sweater, jacket,scarf ,glove ,hat, boots
+    
+    -25 to -20 = 1 sock, thermals, same, boots
+    
+    -20 to -10 = regular shit ,sweater, boots
+
+    -10 to  0. = jacket, hat
+    
+    -0  to  10 = sweater or windbreaker
+
+    -10 to  20 = t-shirt, pants
+
+    -20 to. 25 = pants, tshirt, light outerwear
+
+    30++       = Shorts, tshirt , tank, burks,
+
+    
+    Possible Conditions:
+
+    Rain
+        umbrella and boots
+    Hail 
+        Dont go outside
+
+    ThunderStorm
+        just wet or rain jacket and rainboots
+
+    Blizzard
+        same thing as 30
+
+    Snow
+        -Boots
+
+    Mist
+        extra layer cause your gonna get wet 
+
+    Sunny
+        Sunscreen, sunglasses, hat with a cap
