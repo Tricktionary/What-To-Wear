@@ -72,22 +72,31 @@ function setTheme(lat,lon){
         var timeInMin = getTime(time);
         var bg;
         //Start theming based of ranges decided 
-
+        //$("#someId").animate({backgroundColor: "#ff0000" });
         //Morning
         if(timeInMin > 420 && timeInMin < 660 ){
+
+            if(currentTheme === "morn"){
+                return;
+            }
+
             $("#"+currentTheme).fadeOut(2000);
             $("#morn").fadeIn(2000);
-            
-            $("#submitCard");
-            $("#weatherCard");
-            $("#headCard");
-            $("#ubodyCard");
-            $("#lbodyCard");
-            $("#feetCard");
+            $("#submitCard").animate({backgroundColor: "#4db6ac" });
+            $("#weatherCard").animate({backgroundColor: "#4db6ac" });;
+            $("#headCard").animate({backgroundColor: "#4db6ac" });;
+            $("#ubodyCard").animate({backgroundColor: "#4db6ac" });;
+            $("#lbodyCard").animate({backgroundColor: "#4db6ac" });;
+            $("#feetCard").animate({backgroundColor: "#4db6ac" });;
             currentTheme = "morn";
         }
         //Day
         if(timeInMin > 660 && timeInMin < 960){
+            
+            if(currentTheme === "day"){
+                return;
+            }
+
             $("#"+currentTheme).fadeOut(2000);
             $("#day").fadeIn(2000);
             $("#submitCard");
@@ -101,6 +110,11 @@ function setTheme(lat,lon){
         }
         //Sunset
         if(timeInMin > 960 && timeInMin < 1080){
+
+            if(currentTheme === "sunset"){
+                return;
+            }
+
             $("#"+currentTheme).fadeOut(2000);
             $("#sunset").fadeIn(2000);
             $("#submitCard");
@@ -114,6 +128,11 @@ function setTheme(lat,lon){
         }
         //Night
         if(timeInMin <420 || timeInMin >1080){
+
+            if(currentTheme === "night"){
+                return;
+            }
+
             $("#"+currentTheme).fadeOut(2000);
             $("#night").fadeIn(2000);
             $("#submitCard");
