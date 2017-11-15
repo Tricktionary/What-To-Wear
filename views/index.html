@@ -31,8 +31,11 @@
 
 </head>
 
-<body id="body" class = "bg">
-
+<body id="body" >
+    <img src="styles/BG_SUN.jpg"    class="bg"  alt="" id = "day"    >
+    <img src="styles/BG_NIGHT.png"  class="bg"  alt="" id = "night"  style="display:none;">
+    <img src="styles/BG_MORN.jpg"   class="bg"  alt="" id = "morn"   style="display:none;">
+    <img src="styles/BG_SUNSET.jpg" class="bg"  alt="" id = "sunset" style="display:none;">
     <!--SUBMIT AND CURRENT WEATHER-->
     <div class="row"> 
         <div class=" col s12 m12 centers">
@@ -52,6 +55,7 @@
             <div id="weatherCard" class="card red lighten-2 z-depth-5">
                 <div class="card-content white-text">
                     <h5>Current Weather Conditions:</h5>
+                    <h5 id = "error"></h5>
                     <p id = "weatherDesc"></p>
                     <p id = "currTemp"></p>
                     <p id = "highTemp"></p>
@@ -97,7 +101,7 @@
             </div> 
         </div>
     </div>
-
+     
     <script src="js/script.js"></script>
 </body>
 
