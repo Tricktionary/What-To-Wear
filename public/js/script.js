@@ -1,6 +1,6 @@
 //Weather Icon Json
 var weatherIcons;
-var currentTheme = "day";
+var currentTheme;
 /*
     CLOTHING
 */
@@ -71,76 +71,77 @@ function setTheme(lat,lon){
         var time = obj.time.substring(11);
         var timeInMin = getTime(time);
         var bg;
-        //Start theming based of ranges decided 
-        //$("#someId").animate({backgroundColor: "#ff0000" });
+
         //Morning
         if(timeInMin > 420 && timeInMin < 660 ){
-
+            console.log(1);
             if(currentTheme === "morn"){
                 return;
             }
-
             $("#"+currentTheme).fadeOut(2000);
             $("#morn").fadeIn(2000);
-            $("#submitCard").animate({backgroundColor: "#4db6ac" });
-            $("#weatherCard").animate({backgroundColor: "#4db6ac" });;
-            $("#headCard").animate({backgroundColor: "#4db6ac" });;
-            $("#ubodyCard").animate({backgroundColor: "#4db6ac" });;
-            $("#lbodyCard").animate({backgroundColor: "#4db6ac" });;
-            $("#feetCard").animate({backgroundColor: "#4db6ac" });;
+            $("#submitCard").css('background-color', '#4db6ac');
+            $("#weatherCard").css('background-color', "#4db6ac");
+            $("#headCard").css('background-color', "#4db6ac");
+            $("#ubodyCard").css('background-color', "#4db6ac");
+            $("#lbodyCard").css('background-color', "#4db6ac");
+            $("#feetCard").css('background-color', "#4db6ac");
+            $("#submit").css('background-color','#00796b');
             currentTheme = "morn";
         }
         //Day
         if(timeInMin > 660 && timeInMin < 960){
-            
+            console.log(2);
             if(currentTheme === "day"){
                 return;
             }
 
             $("#"+currentTheme).fadeOut(2000);
             $("#day").fadeIn(2000);
-            $("#submitCard");
-            $("#weatherCard");
-            $("#headCard");
-            $("#ubodyCard");
-            $("#lbodyCard");
-            $("#feetCard");
-
+            $("#submitCard").css('background-color', '#e57373');
+            $("#weatherCard").css('background-color', "#e57373");
+            $("#headCard").css('background-color', "#e57373");
+            $("#ubodyCard").css('background-color', "#e57373");
+            $("#lbodyCard").css('background-color', "#e57373");
+            $("#feetCard").css('background-color', "#e57373");
+            $("#submit").css('background-color','#b71c1c');
             currentTheme = "day";
         }
         //Sunset
         if(timeInMin > 960 && timeInMin < 1080){
-
+            console.log(3);
             if(currentTheme === "sunset"){
                 return;
             }
 
             $("#"+currentTheme).fadeOut(2000);
             $("#sunset").fadeIn(2000);
-            $("#submitCard");
-            $("#weatherCard");
-            $("#headCard");
-            $("#ubodyCard");
-            $("#lbodyCard");
-            $("#feetCard");
+            $("#submitCard").css('background-color', '#ff7043');
+            $("#weatherCard").css('background-color', "#ff7043");
+            $("#headCard").css('background-color', "#ff7043");
+            $("#ubodyCard").css('background-color', "#ff7043");
+            $("#lbodyCard").css('background-color', "#ff7043");
+            $("#feetCard").css('background-color', "#ff7043");
+            $("#submit").css('background-color','#7e57c2');
 
             currentTheme = "sunset";
         }
         //Night
         if(timeInMin <420 || timeInMin >1080){
-
+            console.log(4);
             if(currentTheme === "night"){
                 return;
             }
 
             $("#"+currentTheme).fadeOut(2000);
             $("#night").fadeIn(2000);
-            $("#submitCard");
-            $("#weatherCard");
-            $("#headCard");
-            $("#ubodyCard");
-            $("#lbodyCard");
-            $("#feetCard");
+            $("#submitCard").css('background-color', '#607d8b');
+            $("#weatherCard").css('background-color', "#607d8b");
+            $("#headCard").css('background-color', "#607d8b");
+            $("#ubodyCard").css('background-color', "#607d8b");
+            $("#lbodyCard").css('background-color', "#607d8b");
+            $("#feetCard").css('background-color', "#607d8b");
+            $("#submit").css('background-color','#263238');
 
             currentTheme = "night";
         }
@@ -165,9 +166,3 @@ function getTime(timeString){
     return(hour*60 + parseInt(minute));
 }
 
-
-function changeColor()
-{
-    $("#myDiv").animate({backgroundColor: colors[i]},1000);
-    setTimeout(changeColor,2500);
-}

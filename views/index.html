@@ -32,26 +32,30 @@
 </head>
 
 <body id="body" >
-    <img src="styles/BG_SUN.jpg"    class="bg"  alt="" id = "day"    >
+    
+    <!--BACKGROUND IMAGES-->
+    <img src="styles/BG_SUN.jpg"    class="bg"  alt="" id = "day"    style="display:none">
     <img src="styles/BG_NIGHT.png"  class="bg"  alt="" id = "night"  style="display:none;">
     <img src="styles/BG_MORN.jpg"   class="bg"  alt="" id = "morn"   style="display:none;">
     <img src="styles/BG_SUNSET.jpg" class="bg"  alt="" id = "sunset" style="display:none;">
+    
     <!--SUBMIT AND CURRENT WEATHER-->
     <div class="row"> 
         <div class="col s12 m12 center">
-            <h1 class="center" style="position: relative;">What to Wear?</h1>
+            <h1 class="center white-text" style="position: relative;">What to Wear?</h1>
         </div>  
         <div class="col s12 m6" >
-            <div id="submitCard" class="card red lighten-2 z-depth-5"">
+            <div id="submitCard" class="card z-depth-5""  style="background-color: #424242">
                 <div class="card-content white-text">
                     <h5>Enter City Name:<h5>
                     <input type="text" name="city" id="city" />
-                    <div class="btn waves-effect waves-light red darken-4" id="submit" onclick="getWeather()" style="margin-bottom: 50px;">Submit</div>
+                    <div class="btn waves-effect waves-light " style="background-color: #212121" id="submit" onclick="getWeather()" style="margin-bottom: 50px;">Submit</div>
                 </div>
             </div>
+
         </div>
         <div class="col s12 m6">
-            <div id="weatherCard" class="card red lighten-2 z-depth-5">
+            <div id="weatherCard" class="card z-depth-5" style="background-color: #424242">
                 <div class="card-content white-text">
                     <h5>Current Weather Conditions:</h5>
                     <h5 id = "error"></h5>
@@ -65,10 +69,10 @@
         </div>
     </div>
 
-    <!--CLOTHING-->
+    <!--CLOTHING CATEGORY-->
     <div class="row">
         <div class="col m3 s3">
-            <div id="headCard" class="card red lighten-1 z-depth-5">
+            <div id="headCard" class="card z-depth-5"  style="background-color: #424242">
                 <div class="card-content white-text">
                     <h6>Head:</h6>
                     <div id = "head"></div>
@@ -76,7 +80,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div id="ubodyCard" class="card red lighten-1 z-depth-5">
+            <div id="ubodyCard" class="card z-depth-5"  style="background-color: #424242">
                 <div class="card-content white-text">
                     <h6>Upper Body:</h6>
                     <div id = "uBody"></div>
@@ -84,7 +88,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div id="lbodyCard" class="card red lighten-1 z-depth-5">
+            <div id="lbodyCard" class="card z-depth-5"  style="background-color: #424242">
                 <div class="card-content white-text">
                     <h6>Lower Body:</h6>
                     <div id = "lBody"></div>
@@ -92,7 +96,7 @@
             </div> 
         </div>
         <div class="col m3 s3">
-            <div id="feetCard" class="card red lighten-1 z-depth-5">
+            <div id="feetCard" class="card z-depth-5"  style="background-color: #424242">
                 <div class="card-content white-text">
                     <h6>Feet:</h6>
                     <div id = "feet"></div>
