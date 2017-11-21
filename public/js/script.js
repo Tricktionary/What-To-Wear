@@ -1,20 +1,20 @@
 //Weather Icon Json
 var weatherIcons;
 var currentTheme;
-/*
-    CLOTHING
-*/
-var headCloth = {};
-var upperBodyCloths = {};
-var lowerBodyCloths = {};
-var footCloth       = {};
+var clothingOptions;
 
 //Pulling weather icons
 $(document).ready(function(){
-    //load in JSON object
+    //load in JSON object for ICONS
     $.getJSON("weatherIcon.json", function(json) {
        weatherIcons = json;
     });
+    //load JSON object for different weather patterns
+    $.getJSON("weather.json",function(json){
+        clothingOptions = json;
+        console.log(clothingOptions);
+    });
+
 });
 
 //Get the current weather conditions
@@ -74,7 +74,7 @@ function setTheme(lat,lon){
 
         //Morning
         if(timeInMin > 420 && timeInMin < 660 ){
-            console.log(1);
+            //console.log(1);
             if(currentTheme === "morn"){
                 return;
             }
@@ -91,7 +91,7 @@ function setTheme(lat,lon){
         }
         //Day
         if(timeInMin > 660 && timeInMin < 960){
-            console.log(2);
+            //console.log(2);
             if(currentTheme === "day"){
                 return;
             }
@@ -109,7 +109,7 @@ function setTheme(lat,lon){
         }
         //Sunset
         if(timeInMin > 960 && timeInMin < 1080){
-            console.log(3);
+            //console.log(3);
             if(currentTheme === "sunset"){
                 return;
             }
@@ -128,7 +128,7 @@ function setTheme(lat,lon){
         }
         //Night
         if(timeInMin <420 || timeInMin >1080){
-            console.log(4);
+            //console.log(4);
             if(currentTheme === "night"){
                 return;
             }
@@ -156,6 +156,7 @@ function setClothing(temp,condition){
     var lBody = $("#lBody");
     var feet  = $("#feet");
 
+    console.log(clothingOptions);
     /* List all possible weather condition and show accordingly */
 }
 
