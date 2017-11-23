@@ -12,7 +12,7 @@ $(document).ready(function(){
     //load JSON object for different weather patterns
     $.getJSON("weather.json",function(json){
         clothingOptions = json;
-        console.log(clothingOptions);
+        //console.log(clothingOptions);
     });
 
 });
@@ -29,7 +29,7 @@ function getWeather() {
 
         var prefix = 'wi wi-';
         var obj = JSON.parse(data);
-        console.log(obj);
+        //console.log(obj);
         if(obj.cod === 200){
             
             
@@ -155,8 +155,154 @@ function setClothing(temp,condition){
     var uBody = $("#uBody");
     var lBody = $("#lBody");
     var feet  = $("#feet");
+    var clothing;
 
-    console.log(clothingOptions);
+    //var test = clothingOptions[-30];
+    //test = test["Snow"];
+    //console.log(test);
+
+    //Less Than 30
+    if(temp < -30){
+        clothing = clothingOptions[-30];
+        if(condition === "Rain" || condition === "Drizzle"){
+            clothing = clothing["Drizzle"];
+        }
+        if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
+            clothing = clothing["Clear"];
+        }
+        else{ //Conditions Are Terrible
+            //Thunderstorm  Extreme
+            console.log("Terrible Don't Go Outside");
+        }
+    }
+    //-30 to -25
+    if(-30 < temp < -25){
+        clothing = clothingOptions[-25];
+        if(condition === "Rain" || condition === "Drizzle"){
+            clothing = clothing["Drizzle"];
+        }
+        if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
+            clothing = clothing["Clear"];
+        }
+        else{ //Conditions Are Terrible
+            //Thunderstorm  Extreme
+            console.log("Terrible Don't Go Outside");
+        }
+    }
+    //-25 to -20
+    if(-25 < temp < -20){
+        clothing = clothingOptions[-20];
+        if(condition === "Rain" || condition === "Drizzle"){
+            clothing = clothing["Drizzle"];
+        }
+        if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
+            clothing = clothing["Clear"];
+        }
+        else{ //Conditions Are Terrible
+            //Thunderstorm  Extreme
+            console.log("Terrible Don't Go Outside");
+        }
+    }
+    //-20 to -10
+    if(-20 < temp < -10){
+        clothing = clothingOptions[-10];
+        if(condition === "Rain" || condition === "Drizzle"){
+            clothing = clothing["Drizzle"];
+        }
+        if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
+            clothing = clothing["Clear"];
+        }
+        else{ //Conditions Are Terrible
+            //Thunderstorm  Extreme
+            console.log("Terrible Don't Go Outside");
+        }
+    }
+    // -10 to 0
+    if(-10< temp <0){
+        clothing = clothingOptions[0];
+        if(condition === "Rain" || condition === "Drizzle"){
+            clothing = clothing["Drizzle"];
+        }
+        if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
+            clothing = clothing["Clear"];
+        }
+        else{ //Conditions Are Terrible
+            //Thunderstorm  Extreme
+            console.log("Terrible Don't Go Outside");
+        }
+    }
+    //0 to 10
+    if(0 < temp < 10){
+        clothing = clothingOptions[0];
+        if(condition === "Rain" || condition === "Drizzle"){
+            clothing = clothing["Drizzle"];
+        }
+        if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
+            clothing = clothing["Clear"];
+        }
+        else{ //Conditions Are Terrible
+            //Thunderstorm  Extreme
+            console.log("Terrible Don't Go Outside");
+        }
+    }
+    //10 to 20
+    if(10 < temp <20){
+        clothing = clothingOptions[10];
+        if(condition === "Rain" || condition === "Drizzle"){
+            clothing = clothing["Drizzle"];
+        }
+        if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
+            clothing = clothing["Clear"];
+        }
+        else{ //Conditions Are Terrible
+            //Thunderstorm  Extreme
+            console.log("Terrible Don't Go Outside");
+        }
+    }
+    //20 to 25
+    if(20 < temp < 25){
+        clothing = clothingOptions[20];
+        if(condition === "Rain" || condition === "Drizzle"){
+            clothing = clothing["Drizzle"];
+        }
+        if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
+            clothing = clothing["Clear"];
+        }
+        else{ //Conditions Are Terrible
+            //Thunderstorm  Extreme
+            console.log("Terrible Don't Go Outside");
+        }
+    }
+    //25 to 30
+    if(25 < temp < 30){
+        clothing = clothingOptions[30];
+        if(condition === "Rain" || condition === "Drizzle"){
+            clothing = clothing["Drizzle"];
+        }
+        if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
+            clothing = clothing["Clear"];
+        }
+        else{ //Conditions Are Terrible
+            //Thunderstorm  Extreme
+            console.log("Terrible Don't Go Outside");
+        }
+    }
+    // +30
+    if(temp > 30){
+        clothing = clothingOptions[30];
+        if(condition === "Rain" || condition === "Drizzle"){
+            clothing = clothing["Drizzle"];
+        }
+        if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
+            clothing = clothing["Clear"];
+        }
+        else{ //Conditions Are Terrible
+            //Thunderstorm  Extreme
+            console.log("Terrible Don't Go Outside");
+        }
+    }
+
+
     /* List all possible weather condition and show accordingly */
 }
 

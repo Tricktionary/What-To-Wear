@@ -1,174 +1,160 @@
 {
 	"-30": {
-		"condition": [{
-				"Snow": {
-					"head": ["Hat", "Scarf"],
-					"uBody": ["Parka", "Sweater", "T-Shirt", "Thermals", "Gloves"],
-					"lBody": ["Thermals", "Pants"],
-					"feet": ["Boots", "Socks"]
-				}
-			},
-			{
-				"Clear": {
-					"head": ["Hat", "Scarf"],
-					"uBody": ["Parka", "Sweater", "T-Shirt", "Thermals", "Gloves"],
-					"lBody": ["Thermals", "Pants"],
-					"feet": ["Boots", "Socks"]
-				}
-			}
-		]
+		"Snow": {
+			"head": ["Hat", "Scarf"],
+			"uBody": ["Parka", "Sweater", "T-Shirt", "Thermals", "Gloves"],
+			"lBody": ["Thermals", "Pants"],
+			"feet": ["Boots", "Socks"]
+		},
+		"Clear": {
+			"head": ["Hat", "Scarf"],
+			"uBody": ["Parka", "Sweater", "T-Shirt", "Thermals", "Gloves"],
+			"lBody": ["Thermals", "Pants"],
+			"feet": ["Boots", "Socks"]
+		}
 	},
 	"-25": {
-		"condition": [{
-				"Snow": {
-					"head": ["Hat", "Scarf"],
-					"uBody": ["Parka", "Sweater", "T-Shirt", "Thermals", "Gloves"],
-					"lBody": ["Thermals", "Pants"],
-					"feet": ["Boots", "Socks"]
-				}
-			},
-			{
-				"Clear": {
-					"head": ["Hat", "Scarf"],
-					"uBody": ["Parka", "Sweater", "T-Shirt", "Gloves"],
-					"lBody": ["Thermals", "Pants"],
-					"feet": ["Boots", "Socks"]
-				}
-			}
-		]
+		"Snow": {
+			"head": ["Hat", "Scarf"],
+			"uBody": ["Parka", "Sweater", "T-Shirt", "Thermals", "Gloves"],
+			"lBody": ["Thermals", "Pants"],
+			"feet": ["Boots", "Socks"]
+		},
+		"Clear": {
+			"head": ["Hat", "Scarf"],
+			"uBody": ["Parka", "Sweater", "T-Shirt", "Gloves"],
+			"lBody": ["Thermals", "Pants"],
+			"feet": ["Boots", "Socks"]
+		}
+
 	},
 	"-20": {
-		"condition": [{
-				"Snow": {
-					"head": ["Hat"],
-					"uBody": ["Parka", "Sweater", "T-Shirt"],
-					"lBody": ["Pants"],
-					"feet": ["Boots", "Socks"]
-				}
-			},
-			{
-				"Clear": {
-					"head": ["Hat"],
-					"uBody": ["Parka", "Sweater", "T-Shirt"],
-					"lBody": ["Pants"],
-					"feet": ["Boots", "Socks"]
-				}
-			}
-		]
+		"Snow": {
+			"head": ["Hat"],
+			"uBody": ["Parka", "Sweater", "T-Shirt"],
+			"lBody": ["Pants"],
+			"feet": ["Boots", "Socks"]
+
+		},
+
+		"Clear": {
+			"head": ["Hat"],
+			"uBody": ["Parka", "Sweater", "T-Shirt"],
+			"lBody": ["Pants"],
+			"feet": ["Boots", "Socks"]
+		}
+
 	},
 	"-10": {
-		"condition": [{
-				"Snow": {
-					"head": ["Hat"],
-					"uBody": ["Parka", "Sweater", "T-Shirt"],
-					"lBody": ["Pants"],
-					"feet": ["Boots", "Socks"]
-				}
-			},
-			{
-				"Clear": {
-					"head": ["Hat"],
-					"uBody": ["Parka", "Sweater", "T-Shirt"],
-					"lBody": ["Pants"],
-					"feet": ["Boots", "Socks"]
-				}
-			}
-		]
+		"Snow": {
+			"head": ["Hat"],
+			"uBody": ["Parka", "Sweater", "T-Shirt"],
+			"lBody": ["Pants"],
+			"feet": ["Boots", "Socks"]
+
+		},
+
+		"Clear": {
+			"head": ["Hat"],
+			"uBody": ["Parka", "Sweater", "T-Shirt"],
+			"lBody": ["Pants"],
+			"feet": ["Boots", "Socks"]
+		}
+
+
 	},
 	"0": {
-		"condition": [{
-				"Drizzle": {
-					"head": ["Nothing"],
-					"uBody": ["Jacket", "T-Shirt", "Umbrella"],
-					"lBody": ["Pants"],
-					"feet": ["Boots", "Socks"]
-				}
-			},
-			{
-				"Clear": {
-					"head": ["Nothing"],
-					"uBody": ["Sweater", "T-Shirt"],
-					"lBody": ["Pants"],
-					"feet": ["Sneakers", "Socks"]
-				}
-			}
-		]
+
+		"Drizzle": {
+			"head": ["Nothing"],
+			"uBody": ["Jacket", "T-Shirt", "Umbrella"],
+			"lBody": ["Pants"],
+			"feet": ["Boots", "Socks"]
+
+		},
+
+		"Clear": {
+			"head": ["Nothing"],
+			"uBody": ["Sweater", "T-Shirt"],
+			"lBody": ["Pants"],
+			"feet": ["Sneakers", "Socks"]
+		}
+
+
 	},
 	"10": {
-		"condition": [{
-				"Drizzle": {
-					"head": ["Nothing"],
-					"uBody": ["Light Jacket", "T-Shirt", "Umbrella"],
-					"lBody": ["Pants"],
-					"feet": ["Boots", "Socks"]
-				}
-			},
-			{
-				"Clear": {
-					"head": ["Nothing"],
-					"uBody": ["Sweater", "T-Shirt"],
-					"lBody": ["Pants"],
-					"feet": ["Sneakers", "Socks"]
-				}
-			}
-		]
+
+		"Drizzle": {
+			"head": ["Nothing"],
+			"uBody": ["Light Jacket", "T-Shirt", "Umbrella"],
+			"lBody": ["Pants"],
+			"feet": ["Boots", "Socks"]
+
+		},
+
+		"Clear": {
+			"head": ["Nothing"],
+			"uBody": ["Sweater", "T-Shirt"],
+			"lBody": ["Pants"],
+			"feet": ["Sneakers", "Socks"]
+		}
+
+
 	},
 	"20": {
-		"condition": [{
-				"Drizzle": {
-					"head": ["Nothing"],
-					"uBody": ["Light Jacket", "T-Shirt", "Umbrella"],
-					"lBody": ["Pants"],
-					"feet": ["Boots", "Socks"]
-				}
-			},
-			{
-				"Clear": {
-					"head": ["Sun Hat", "Sunglasses"],
-					"uBody": ["T-Shirt"],
-					"lBody": ["Pants"],
-					"feet": ["Sneakers", "Socks"]
-				}
-			}
-		]
+
+		"Drizzle": {
+			"head": ["Nothing"],
+			"uBody": ["Light Jacket", "T-Shirt", "Umbrella"],
+			"lBody": ["Pants"],
+			"feet": ["Boots", "Socks"]
+
+		},
+
+		"Clear": {
+			"head": ["Sun Hat", "Sunglasses"],
+			"uBody": ["T-Shirt"],
+			"lBody": ["Pants"],
+			"feet": ["Sneakers", "Socks"]
+		}
+
+
 	},
 	"25": {
-		"condition": [{
-				"Drizzle": {
-					"head": ["Nothing"],
-					"uBody": ["Umbrella", "T-Shirt"],
-					"lBody": ["Shorts"],
-					"feet": ["Sneakers"]
-				}
-			},
-			{
-				"Clear": {
-					"head": ["Sun Hat"],
-					"uBody": ["T-Shirt"],
-					"lBody": ["Shorts"],
-					"feet": ["Sneakers"]
-				}
-			}
-		]
+
+		"Drizzle": {
+			"head": ["Nothing"],
+			"uBody": ["Umbrella", "T-Shirt"],
+			"lBody": ["Shorts"],
+			"feet": ["Sneakers"]
+
+		},
+
+		"Clear": {
+			"head": ["Sun Hat"],
+			"uBody": ["T-Shirt"],
+			"lBody": ["Shorts"],
+			"feet": ["Sneakers"]
+		}
+
+
 	},
 	"30": {
-		"condition": [{
-				"Drizzle": {
-					"head": ["Nothing"],
-					"uBody": ["Umbrella", "T-Shirt"],
-					"lBody": ["Shorts"],
-					"feet": ["Slides"]
-				}
-			},
-			{
-				"Clear": {
-					"head": ["Nothing"],
-					"uBody": ["Umbrella", "T-Shirt"],
-					"lBody": ["Shorts"],
-					"feet": ["Slides"]
-				}
-			}
-		]
+		"Drizzle": {
+			"head": ["Nothing"],
+			"uBody": ["Umbrella", "T-Shirt"],
+			"lBody": ["Shorts"],
+			"feet": ["Slides"]
+		},
+
+		"Clear": {
+			"head": ["Nothing"],
+			"uBody": ["Umbrella", "T-Shirt"],
+			"lBody": ["Shorts"],
+			"feet": ["Slides"]
+		}
+
+
 	}
 
 }

@@ -47,6 +47,11 @@ app.get('/time',function(request,response){
   });
 });
 
+//Send A 404 For everything else not found
+app.all("*",function(req,res){
+  res.sendStatus(404);
+});
+
 //Listening on local host 3000
 app.listen(3000,function(){
   console.log("Server Running on localhost:3000");
