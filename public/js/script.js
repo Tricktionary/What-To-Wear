@@ -157,15 +157,18 @@ function setClothing(temp,condition){
     var feet  = $("#feet");
     var clothing;
 
-    //var test = clothingOptions[-30];
-    //test = test["Snow"];
-    //console.log(test);
+    var headStr = "";
+    var uBodyStr = "";
+    var lBodyStr = "";
+    var feetStr = "";
+
+   console.log(temp + " " + condition);
 
     //Less Than 30
     if(temp < -30){
         clothing = clothingOptions[-30];
-        if(condition === "Rain" || condition === "Drizzle"){
-            clothing = clothing["Drizzle"];
+        if(condition === "Snow"){
+            clothing = clothing["Snow"];
         }
         if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
             clothing = clothing["Clear"];
@@ -173,41 +176,120 @@ function setClothing(temp,condition){
         else{ //Conditions Are Terrible
             //Thunderstorm  Extreme
             console.log("Terrible Don't Go Outside");
+        }
+        //Filled
+        if(clothing["head"]!== null){
+            //Head String
+            for(var i = 0 ; i < clothing["head"].length ; i++){
+                headStr = headStr+ clothing["head"][i] + " ";
+            }
+            head.text(headStr);
+
+            //uBody
+            for(var i = 0 ; i < clothing["uBody"].length ; i++){
+                uBodyStr = uBodyStr +clothing["uBody"][i] +" "  ;
+            }
+            uBody.text(uBodyStr);
+
+            //lBody
+            for(var i = 0 ; i < clothing["lBody"].length ; i++){
+                lBodyStr = lBodyStr +clothing["lBody"][i] +" "  ;
+            }
+            lBody.text(lBodyStr);
+
+            //feet
+            for(var i = 0 ; i < clothing["feet"].length ; i++){
+                feetStr = feetStr +clothing["feet"][i] +" "  ;
+            }
+            feet.text(feetStr);
+
         }
     }
     //-30 to -25
-    if(-30 < temp < -25){
+    if(-30 <= temp <= -25){
         clothing = clothingOptions[-25];
-        if(condition === "Rain" || condition === "Drizzle"){
-            clothing = clothing["Drizzle"];
+        if(condition === "Snow"){
+            clothing = clothing["Snow"];
         }
         if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
             clothing = clothing["Clear"];
         }
-        else{ //Conditions Are Terrible
-            //Thunderstorm  Extreme
+        else{
             console.log("Terrible Don't Go Outside");
+        }
+        //Filled
+        if(clothing["head"]!== null){
+            //Head String
+            for(var i = 0 ; i < clothing["head"].length ; i++){
+                headStr = headStr+ clothing["head"][i] + " ";
+            }
+            head.text(headStr);
+
+            //uBody
+            for(var i = 0 ; i < clothing["uBody"].length ; i++){
+                uBodyStr = uBodyStr +clothing["uBody"][i] +" "  ;
+            }
+            uBody.text(uBodyStr);
+
+            //lBody
+            for(var i = 0 ; i < clothing["lBody"].length ; i++){
+                lBodyStr = lBodyStr +clothing["lBody"][i] +" "  ;
+            }
+            lBody.text(lBodyStr);
+
+            //feet
+            for(var i = 0 ; i < clothing["feet"].length ; i++){
+                feetStr = feetStr +clothing["feet"][i] +" "  ;
+            }
+            feet.text(feetStr);
+
         }
     }
     //-25 to -20
     if(-25 < temp < -20){
         clothing = clothingOptions[-20];
-        if(condition === "Rain" || condition === "Drizzle"){
-            clothing = clothing["Drizzle"];
+        if(condition === "Snow"){
+            clothing = clothing["Snow"];
         }
         if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
             clothing = clothing["Clear"];
         }
-        else{ //Conditions Are Terrible
-            //Thunderstorm  Extreme
+        else{
             console.log("Terrible Don't Go Outside");
+        }
+                //Filled
+        if(clothing["head"]!== null){
+            //Head String
+            for(var i = 0 ; i < clothing["head"].length ; i++){
+                headStr = headStr+ clothing["head"][i] + " ";
+            }
+            head.text(headStr);
+
+            //uBody
+            for(var i = 0 ; i < clothing["uBody"].length ; i++){
+                uBodyStr = uBodyStr +clothing["uBody"][i] +" "  ;
+            }
+            uBody.text(uBodyStr);
+
+            //lBody
+            for(var i = 0 ; i < clothing["lBody"].length ; i++){
+                lBodyStr = lBodyStr +clothing["lBody"][i] +" "  ;
+            }
+            lBody.text(lBodyStr);
+
+            //feet
+            for(var i = 0 ; i < clothing["feet"].length ; i++){
+                feetStr = feetStr +clothing["feet"][i] +" "  ;
+            }
+            feet.text(feetStr);
+
         }
     }
     //-20 to -10
-    if(-20 < temp < -10){
+    if(-20 <= temp <= -10){
         clothing = clothingOptions[-10];
-        if(condition === "Rain" || condition === "Drizzle"){
-            clothing = clothing["Drizzle"];
+        if(condition === "Snow"){
+            clothing = clothing["Snow"];
         }
         if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
             clothing = clothing["Clear"];
@@ -215,24 +297,78 @@ function setClothing(temp,condition){
         else{ //Conditions Are Terrible
             //Thunderstorm  Extreme
             console.log("Terrible Don't Go Outside");
+        }
+        //Filled
+        if(clothing["head"]!== null){
+            //Head String
+            for(var i = 0 ; i < clothing["head"].length ; i++){
+                headStr = headStr+ clothing["head"][i] + " ";
+            }
+            head.text(headStr);
+
+            //uBody
+            for(var i = 0 ; i < clothing["uBody"].length ; i++){
+                uBodyStr = uBodyStr +clothing["uBody"][i] +" "  ;
+            }
+            uBody.text(uBodyStr);
+
+            //lBody
+            for(var i = 0 ; i < clothing["lBody"].length ; i++){
+                lBodyStr = lBodyStr +clothing["lBody"][i] +" "  ;
+            }
+            lBody.text(lBodyStr);
+
+            //feet
+            for(var i = 0 ; i < clothing["feet"].length ; i++){
+                feetStr = feetStr +clothing["feet"][i] +" "  ;
+            }
+            feet.text(feetStr);
+
         }
     }
     // -10 to 0
-    if(-10< temp <0){
+    if(-10< temp < 0){
         clothing = clothingOptions[0];
-        if(condition === "Rain" || condition === "Drizzle"){
-            clothing = clothing["Drizzle"];
+        if(condition === "Snow"){
+            clothing = clothing["Snow"];
         }
         if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
             clothing = clothing["Clear"];
         }
-        else{ //Conditions Are Terrible
-            //Thunderstorm  Extreme
+        else{ 
             console.log("Terrible Don't Go Outside");
+        }
+
+        //Filled
+        if(clothing["head"]!== null){
+            //Head String
+            for(var i = 0 ; i < clothing["head"].length ; i++){
+                headStr = headStr+ clothing["head"][i] + " ";
+            }
+            head.text(headStr);
+
+            //uBody
+            for(var i = 0 ; i < clothing["uBody"].length ; i++){
+                uBodyStr = uBodyStr +clothing["uBody"][i] +" "  ;
+            }
+            uBody.text(uBodyStr);
+
+            //lBody
+            for(var i = 0 ; i < clothing["lBody"].length ; i++){
+                lBodyStr = lBodyStr +clothing["lBody"][i] +" "  ;
+            }
+            lBody.text(lBodyStr);
+
+            //feet
+            for(var i = 0 ; i < clothing["feet"].length ; i++){
+                feetStr = feetStr +clothing["feet"][i] +" "  ;
+            }
+            feet.text(feetStr);
+
         }
     }
     //0 to 10
-    if(0 < temp < 10){
+    if(0 <= temp <= 10){
         clothing = clothingOptions[0];
         if(condition === "Rain" || condition === "Drizzle"){
             clothing = clothing["Drizzle"];
@@ -240,13 +376,38 @@ function setClothing(temp,condition){
         if(condition === "Clouds" || condition === "Clear" || condition =="Atmosphere"){
             clothing = clothing["Clear"];
         }
-        else{ //Conditions Are Terrible
-            //Thunderstorm  Extreme
+        else{
             console.log("Terrible Don't Go Outside");
+        }
+        if(clothing["head"]!== null){
+        
+            //Head String
+            for(var i = 0 ; i < clothing["head"].length ; i++){
+                headStr = headStr+ clothing["head"][i] + " ";
+            }
+            head.text(headStr);
+
+            //uBody
+            for(var i = 0 ; i < clothing["uBody"].length ; i++){
+                uBodyStr = uBodyStr +clothing["uBody"][i] +" "  ;
+            }
+            uBody.text(uBodyStr);
+
+            //lBody
+            for(var i = 0 ; i < clothing["lBody"].length ; i++){
+                lBodyStr = lBodyStr +clothing["lBody"][i] +" "  ;
+            }
+            lBody.text(lBodyStr);
+
+            //feet
+            for(var i = 0 ; i < clothing["feet"].length ; i++){
+                feetStr = feetStr +clothing["feet"][i] +" "  ;
+            }
+            feet.text(feetStr);
         }
     }
     //10 to 20
-    if(10 < temp <20){
+    if(10 < temp < 20){
         clothing = clothingOptions[10];
         if(condition === "Rain" || condition === "Drizzle"){
             clothing = clothing["Drizzle"];
@@ -258,9 +419,36 @@ function setClothing(temp,condition){
             //Thunderstorm  Extreme
             console.log("Terrible Don't Go Outside");
         }
+        //Filled
+        if(clothing["head"]!== null){
+            //Head String
+            for(var i = 0 ; i < clothing["head"].length ; i++){
+                headStr = headStr+ clothing["head"][i] + " ";
+            }
+            head.text(headStr);
+
+            //uBody
+            for(var i = 0 ; i < clothing["uBody"].length ; i++){
+                uBodyStr = uBodyStr +clothing["uBody"][i] +" "  ;
+            }
+            uBody.text(uBodyStr);
+
+            //lBody
+            for(var i = 0 ; i < clothing["lBody"].length ; i++){
+                lBodyStr = lBodyStr +clothing["lBody"][i] +" "  ;
+            }
+            lBody.text(lBodyStr);
+
+            //feet
+            for(var i = 0 ; i < clothing["feet"].length ; i++){
+                feetStr = feetStr +clothing["feet"][i] +" "  ;
+            }
+            feet.text(feetStr);
+
+        }
     }
     //20 to 25
-    if(20 < temp < 25){
+    if(20 <= temp <= 25){
         clothing = clothingOptions[20];
         if(condition === "Rain" || condition === "Drizzle"){
             clothing = clothing["Drizzle"];
@@ -271,6 +459,33 @@ function setClothing(temp,condition){
         else{ //Conditions Are Terrible
             //Thunderstorm  Extreme
             console.log("Terrible Don't Go Outside");
+        }
+        //Filled
+        if(clothing["head"]!== null){
+            //Head String
+            for(var i = 0 ; i < clothing["head"].length ; i++){
+                headStr = headStr+ clothing["head"][i] + " ";
+            }
+            head.text(headStr);
+
+            //uBody
+            for(var i = 0 ; i < clothing["uBody"].length ; i++){
+                uBodyStr = uBodyStr +clothing["uBody"][i] +" "  ;
+            }
+            uBody.text(uBodyStr);
+
+            //lBody
+            for(var i = 0 ; i < clothing["lBody"].length ; i++){
+                lBodyStr = lBodyStr +clothing["lBody"][i] +" "  ;
+            }
+            lBody.text(lBodyStr);
+
+            //feet
+            for(var i = 0 ; i < clothing["feet"].length ; i++){
+                feetStr = feetStr +clothing["feet"][i] +" "  ;
+            }
+            feet.text(feetStr);
+
         }
     }
     //25 to 30
@@ -286,9 +501,36 @@ function setClothing(temp,condition){
             //Thunderstorm  Extreme
             console.log("Terrible Don't Go Outside");
         }
+        //Filled
+        if(clothing["head"]!== null){
+            //Head String
+            for(var i = 0 ; i < clothing["head"].length ; i++){
+                headStr = headStr+ clothing["head"][i] + " ";
+            }
+            head.text(headStr);
+
+            //uBody
+            for(var i = 0 ; i < clothing["uBody"].length ; i++){
+                uBodyStr = uBodyStr +clothing["uBody"][i] +" "  ;
+            }
+            uBody.text(uBodyStr);
+
+            //lBody
+            for(var i = 0 ; i < clothing["lBody"].length ; i++){
+                lBodyStr = lBodyStr +clothing["lBody"][i] +" "  ;
+            }
+            lBody.text(lBodyStr);
+
+            //feet
+            for(var i = 0 ; i < clothing["feet"].length ; i++){
+                feetStr = feetStr +clothing["feet"][i] +" "  ;
+            }
+            feet.text(feetStr);
+
+        }
     }
     // +30
-    if(temp > 30){
+    if(temp >= 30){
         clothing = clothingOptions[30];
         if(condition === "Rain" || condition === "Drizzle"){
             clothing = clothing["Drizzle"];
@@ -299,6 +541,33 @@ function setClothing(temp,condition){
         else{ //Conditions Are Terrible
             //Thunderstorm  Extreme
             console.log("Terrible Don't Go Outside");
+        }
+        //Filled
+        if(clothing["head"]!== null){
+            //Head String
+            for(var i = 0 ; i < clothing["head"].length ; i++){
+                headStr = headStr+ clothing["head"][i] + " ";
+            }
+            head.text(headStr);
+
+            //uBody
+            for(var i = 0 ; i < clothing["uBody"].length ; i++){
+                uBodyStr = uBodyStr +clothing["uBody"][i] +" "  ;
+            }
+            uBody.text(uBodyStr);
+
+            //lBody
+            for(var i = 0 ; i < clothing["lBody"].length ; i++){
+                lBodyStr = lBodyStr +clothing["lBody"][i] +" "  ;
+            }
+            lBody.text(lBodyStr);
+
+            //feet
+            for(var i = 0 ; i < clothing["feet"].length ; i++){
+                feetStr = feetStr +clothing["feet"][i] +" "  ;
+            }
+            feet.text(feetStr);
+
         }
     }
 
