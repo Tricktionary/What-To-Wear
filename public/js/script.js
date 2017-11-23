@@ -162,10 +162,11 @@ function setClothing(temp,condition){
     var lBodyStr = "";
     var feetStr = "";
 
-   console.log(temp + " " + condition);
+    //console.log(temp + " " + condition);
 
     //Less Than 30
     if(temp < -30){
+        console.log(1);
         clothing = clothingOptions[-30];
         if(condition === "Snow"){
             clothing = clothing["Snow"];
@@ -206,7 +207,8 @@ function setClothing(temp,condition){
         }
     }
     //-30 to -25
-    if(-30 <= temp <= -25){
+    else if(-30 <= temp <= -25){
+        console.log(2);
         clothing = clothingOptions[-25];
         if(condition === "Snow"){
             clothing = clothing["Snow"];
@@ -246,7 +248,8 @@ function setClothing(temp,condition){
         }
     }
     //-25 to -20
-    if(-25 < temp < -20){
+    else if(-25 < temp < -20){
+        console.log(3);
         clothing = clothingOptions[-20];
         if(condition === "Snow"){
             clothing = clothing["Snow"];
@@ -286,7 +289,8 @@ function setClothing(temp,condition){
         }
     }
     //-20 to -10
-    if(-20 <= temp <= -10){
+    else if(-20 <= temp <= -10){
+        console.log(4);
         clothing = clothingOptions[-10];
         if(condition === "Snow"){
             clothing = clothing["Snow"];
@@ -327,7 +331,8 @@ function setClothing(temp,condition){
         }
     }
     // -10 to 0
-    if(-10< temp < 0){
+    else if(-10< temp < 0){
+        console.log(5);
         clothing = clothingOptions[0];
         if(condition === "Snow"){
             clothing = clothing["Snow"];
@@ -368,7 +373,8 @@ function setClothing(temp,condition){
         }
     }
     //0 to 10
-    if(0 <= temp <= 10){
+    else if(0 <= temp <= 10){
+        console.log(6);
         clothing = clothingOptions[0];
         if(condition === "Rain" || condition === "Drizzle"){
             clothing = clothing["Drizzle"];
@@ -407,7 +413,8 @@ function setClothing(temp,condition){
         }
     }
     //10 to 20
-    if(10 < temp < 20){
+    else if(10 < temp < 20){
+        console.log(7);
         clothing = clothingOptions[10];
         if(condition === "Rain" || condition === "Drizzle"){
             clothing = clothing["Drizzle"];
@@ -448,7 +455,8 @@ function setClothing(temp,condition){
         }
     }
     //20 to 25
-    if(20 <= temp <= 25){
+    else if(20 <= temp <= 25){
+        console.log(8);
         clothing = clothingOptions[20];
         if(condition === "Rain" || condition === "Drizzle"){
             clothing = clothing["Drizzle"];
@@ -489,7 +497,8 @@ function setClothing(temp,condition){
         }
     }
     //25 to 30
-    if(25 < temp < 30){
+    else if(25 < temp < 30){
+        console.log(9);
         clothing = clothingOptions[30];
         if(condition === "Rain" || condition === "Drizzle"){
             clothing = clothing["Drizzle"];
@@ -530,7 +539,8 @@ function setClothing(temp,condition){
         }
     }
     // +30
-    if(temp >= 30){
+    else if(temp >= 30){
+        console.log(10);
         clothing = clothingOptions[30];
         if(condition === "Rain" || condition === "Drizzle"){
             clothing = clothing["Drizzle"];
