@@ -53,6 +53,6 @@ app.all("*",function(req,res){
 });
 
 //Listening on local host 3000
-app.listen(3000,function(){
+app.listen(PORT,function(){
   console.log("Server Running on localhost:3000");
 });
